@@ -1,5 +1,6 @@
 
-/* Copyright (c) 2020 The ZMK Contributors
+/*
+ * Copyright (c) 2020 The ZMK Contributors
  *
  * SPDX-License-Identifier: MIT
  */
@@ -22,30 +23,14 @@
     #include "macros.dtsi"
     #include "version.dtsi"
 
-    lh_mods: left_hand_mods {
+    hm: homerow_mods {
         compatible = "zmk,behavior-hold-tap";
-        label = "LEFT_MODS";
+        label = "HOMEROW_MODS";
         #binding-cells = <2>;
-        flavor = "tap-unless-interrupted";
         tapping-term-ms = <200>;
-        quick-tap-ms = <200>;
-        require-prior-idle-ms = <125>;
+        quick_tap_ms = <175>;
+        flavor = "tap-preferred";
         bindings = <&kp>, <&kp>;
-        // Teclas de la mano derecha + thumbs
-        hold-trigger-key-positions = <7 8 9 10 11 12 13 21 22 23 24 25 26 27 39 40 41 42 43 44 45 54 55 56 57 58 59 71 72 73 74 75 37 38 53 68 69 70>;
-    };
-
-    rh_mods: right_hand_mods {
-        compatible = "zmk,behavior-hold-tap";
-        label = "RIGHT_MODS";
-        #binding-cells = <2>;
-        flavor = "tap-unless-interrupted";
-        tapping-term-ms = <200>;
-        quick-tap-ms = <200>;
-        require-prior-idle-ms = <125>;
-        bindings = <&kp>, <&kp>;
-        // Teclas de la mano izquierda + thumbs
-        hold-trigger-key-positions = <0 1 2 3 4 5 6 14 15 16 17 18 19 20 28 29 30 31 32 33 34 46 47 48 49 50 51 60 61 62 63 64 35 36 52 65 66 67>;
     };
   };
 
@@ -55,11 +40,11 @@
 
         default_layer {
             bindings = <
- &kp EQUAL          &kp N1          &kp N2            &kp N3              &kp N4  &kp N5                &tog 1                                                                                         &mo 3  &kp N6               &kp N7             &kp N8           &kp N9                   &kp N0  &kp MINUS
-   &kp TAB           &kp Q           &kp W             &kp E               &kp R   &kp T                 &none                                                                                         &none   &kp Y                &kp U              &kp I            &kp O                    &kp P   &kp BSLH
-   &kp ESC  &lh_mods LEFT_GUI A  &lh_mods LEFT_ALT S  &lh_mods LEFT_SHIFT D  &lh_mods LEFT_CONTROL F   &kp G                 &none  &kp LEFT_GUI  &kp LEFT_CONTROL                  &kp RIGHT_ALT  &kp RIGHT_CONTROL       &none   &kp H  &rh_mods RIGHT_CONTROL J  &rh_mods RIGHT_SHIFT K  &rh_mods RIGHT_ALT L  &rh_mods RIGHT_GUI SEMICOLON    &kp SQT
- &kp LSHFT           &kp Z           &kp X             &kp C               &kp V   &kp B                                                 &mo 2                          &mo 2                                  &kp N                &kp M          &kp COMMA          &kp DOT                 &kp FSLH  &kp RSHFT
-     &mo 2       &kp GRAVE        &kp CAPS          &kp LEFT           &kp RIGHT                    &kp DELETE     &kp SPACE         &kp LSHFT                      &kp RSHFT      &kp BACKSPACE  &kp RETURN                     &kp DOWN             &kp UP         &kp LBKT                 &kp RBKT      &mo 2
+ &kp EQUAL     &kp N1    &kp N2    &kp N3     &kp N4  &kp N5                &tog 1                                                                                         &mo 3  &kp N6    &kp N7     &kp N8    &kp N9         &kp N0  &kp MINUS
+   &kp TAB      &kp Q     &kp W     &kp E      &kp R   &kp T                 &none                                                                                         &none   &kp Y     &kp U      &kp I     &kp O          &kp P   &kp BSLH
+   &kp ESC      &kp A     &kp S     &kp D      &kp F   &kp G                 &none  &kp LEFT_GUI  &kp LEFT_CONTROL                  &kp RIGHT_ALT  &kp RIGHT_CONTROL       &none   &kp H     &kp J      &kp K     &kp L  &kp SEMICOLON    &kp SQT
+ &kp LSHFT      &kp Z     &kp X     &kp C      &kp V   &kp B                                                 &mo 2                          &mo 2                                  &kp N     &kp M  &kp COMMA   &kp DOT       &kp FSLH  &kp RSHFT
+     &mo 2  &kp GRAVE  &kp CAPS  &kp LEFT  &kp RIGHT                    &kp DELETE     &kp SPACE         &kp LSHFT                      &kp RSHFT      &kp BACKSPACE  &kp RETURN          &kp DOWN     &kp UP  &kp LBKT       &kp RBKT      &mo 2
             >;
         };
 
