@@ -60,11 +60,11 @@
 
         layer_fn {
             bindings = <
- &trans     &kp F1  &kp F2  &kp F3  &kp F4  &kp F5            &tog 1                                                                     &mo 3  &kp F6    &kp F7   &kp F8         &kp MINUS          &kp EQUAL  &trans
- &trans  &kp GRAVE  &trans  &trans  &trans  &trans             &none                                                                    &trans  &trans    &trans   &trans  &kp LEFT_BRACKET  &kp RIGHT_BRACKET  &trans
- &trans     &trans  &trans  &trans  &trans  &trans             &none  &trans      &trans                        &trans  &kp C_STOP      &trans  &trans  &kp DOWN   &kp UP           &kp SQT           &kp BSLH  &trans
- &trans     &trans  &trans  &trans  &trans  &trans                            &kp C_PREV                  &kp C_VOL_UP                          &trans    &kp F9  &kp F10           &kp F11            &kp F12  &trans
- &trans     &trans  &trans  &trans  &trans                    &trans  &trans  &kp C_NEXT                  &kp C_VOL_DN  &kp C_MUTE  &kp C_PLAY            &trans   &trans            &trans             &trans  &trans
+ &trans     &kp F1        &kp F2  &kp F3  &kp F4  &kp F5            &tog 1                                                                     &mo 3  &kp F6    &kp F7   &kp F8         &kp MINUS          &kp EQUAL  &trans
+ &trans  &kp GRAVE        &trans  &trans  &trans  &trans             &none                                                                    &trans  &trans    &trans   &trans  &kp LEFT_BRACKET  &kp RIGHT_BRACKET  &trans
+ &trans     &trans        &trans  &trans  &trans  &trans             &none  &trans      &trans                        &trans  &kp C_STOP      &trans  &trans  &kp DOWN   &kp UP           &kp SQT           &kp BSLH  &trans
+ &trans     &trans        &trans  &trans  &trans  &trans                            &kp C_PREV                  &kp C_VOL_UP                          &trans    &kp F9  &kp F10           &kp F11            &kp F12  &trans
+ &trans     &trans  &kp CAPSLOCK  &trans  &trans                    &trans  &trans  &kp C_NEXT                  &kp C_VOL_DN  &kp C_MUTE  &kp C_PLAY            &trans   &trans            &trans             &trans  &trans
             >;
         };
 
